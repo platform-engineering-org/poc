@@ -44,6 +44,7 @@ pre-commit install
 
 ```shell
 make build
+.aws directory, with the aws credentials
 ```
 
 ### Running consumer container
