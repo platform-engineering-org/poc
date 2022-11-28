@@ -66,3 +66,24 @@ make rm
 
 [1]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html
 [2]: https://github.com/renovatebot/renovate
+
+## PROD environment
+
+### System Requirements
+
+- `make`
+- `ansible`
+
+### Provisioning
+
+```shell
+make provision
+```
+
+## Infra requirements
+
+- terrafrom cli
+- aws cli
+- After configuring new resource, you shall run `terraform plan` to see the
+  outcome of those changes, then if you are satisfied with the outcome, run
+  `terraform apply` to apply your changes.
