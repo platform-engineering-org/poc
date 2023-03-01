@@ -1,0 +1,24 @@
+= Pulumi configuration
+:data-uri:
+:icons: font
+:showtitle:
+:source-highlighter: highlightjs
+:toc:
+
+This folder contains configuration used to spin up an aws instance using pulumi. This is used for POC of the Platform Engineering Team.
+
+== prerequisites
+1. make sure you have either aws config file under `~/.aws/config` that contains your aws credentials, or the environment variables to configure the AWS CLI.
+2. You have Pulumi installed and are logged in to your Pulumi account. (if not, you'll be prompted to login). 
+
+== Spin up a cluster
+
+1. cd into this folder (/poc/pulumi)
+2. Run the command `pulumi up -s dev -y`. You should see the progress and the status of the instances created.
+* If you get an error "failed to discover plugin requirements" on step #2, it is probably a bug and you can just re-run the command to resolve it.
+
+== Tear down a cluster
+
+1. Make sure you are inside the pulumi folder (/poc/pulumi)
+2. Run the command `pulumi down -s dev -y`. You should see the progress and the status of the instances destroyed.
+
