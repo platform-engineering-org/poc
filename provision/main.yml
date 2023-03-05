@@ -1,4 +1,5 @@
-- hosts: all
+- name: Playbook
+  hosts: all
   debugger: on_failed
   gather_facts: false
 
