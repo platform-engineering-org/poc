@@ -92,11 +92,13 @@ jobs:
           --key-filepath /workspace/key.txt
 
       - name: View cluster creation logs
+        id: view_logs
         continue-on-error: true
         run: |
           docker logs -f crc-cloud-create
 
       - name: Check cluster config
+        id: view_config
         continue-on-error: true
         run: |
           ls -al /tmp
@@ -122,6 +124,9 @@ jobs:
         run: |
           docker logs -f crccloud-destroy
 
+      - name: Fail if previous step failed
+        if: steps.view_logs.outcome == 'failure' || steps.view_config.outcome == 'failure'
+        run: exit 1
 
   build-and-push-image:
     env:
