@@ -10,6 +10,8 @@ This folder contains configuration used to spin up an aws instance using pulumi.
 == prerequisites
 1. Make sure you have either aws config file under `~/.aws/config` that contains your aws credentials, or the environment variables to configure the AWS CLI.
 2. You have Pulumi installed and are logged in to your Pulumi account. (if not, you'll be prompted to login).
+3. Virtual environment is activated
+4. Python requirements are installed `pip install -r requirements.txt`
 
 == Spin up a cluster
 
