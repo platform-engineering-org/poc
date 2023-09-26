@@ -1,2 +1,2 @@
-pulumi-aws==6.1.0
-pulumi-tls==4.10.0
+pulumi-aws==6.2.1
+pulumi-tls==4.11.0
